@@ -9,7 +9,10 @@ import SwiftUI
 
 struct HouseView: View {
     var body: some View {
-        Text("House View")
+        NavigationView {
+            Text("My Household")
+            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline).navigationTitle(Text("My Household"))
+        }
     }
 }
 

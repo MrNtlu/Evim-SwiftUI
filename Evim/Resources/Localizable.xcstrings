@@ -1,0 +1,70 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Delete" : {
+
+    },
+    "Edit" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "History" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geçmiş"
+          }
+        }
+      }
+    },
+    "Home" : {
+
+    },
+    "List" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listem"
+          }
+        }
+      }
+    },
+    "Login View" : {
+
+    },
+    "My House" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evim"
+          }
+        }
+      }
+    },
+    "My Household" : {
+
+    },
+    "Products" : {
+
+    },
+    "Shopping History" : {
+
+    },
+    "Shopping List" : {
+
+    },
+    "Start Shopping" : {
+
+    },
+    "UI View" : {
+
+    }
+  },
+  "version" : "1.1"
+}

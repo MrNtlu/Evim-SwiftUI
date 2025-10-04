@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ShoppingHistoryView: View {
     var body: some View {
-        Text("Shopping History")
+        NavigationView {
+            Text("UI View")
+                .navigationTitle(Text("Shopping History"))
+        }
     }
 }
 

@@ -10,36 +10,32 @@ import SwiftData
 
 struct MainTabView: View {
     
-    private enum Tab: Int {
+    private enum TabEnum: Int {
         case list
         case history
         case home
+        case products
     }
     
-    @State private var selectedTab: Tab = .list
+    @State private var selectedTab: TabEnum = .list
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            ShoppingListView()
-                .tabItem {
-                    Label("List", systemImage: "cart")
-                        .environment(\.symbolVariants, selectedTab == .list ? .fill : .none)
-                }
-                .tag(Tab.list)
+            Tab("List", systemImage: "cart", value: TabEnum.list) {
+                ShoppingListView()
+            }
             
-            ShoppingHistoryView()
-                .tabItem {
-                    Label("History", systemImage: "clock")
-                        .environment(\.symbolVariants, selectedTab == .history ? .fill : .none)
-                }
-                .tag(Tab.history)
-            
-            HouseView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                        .environment(\.symbolVariants, selectedTab == .home ? .fill : .none)
-                }
-                .tag(Tab.home)
+            Tab("Products", systemImage: "square.grid.2x2", value: TabEnum.products) {
+                ProductsView()
+            }
+
+            Tab("History", systemImage: "clock", value: TabEnum.history) {
+                ShoppingHistoryView()
+            }
+
+            Tab("Home", systemImage: "house", value: TabEnum.home) {
+                HouseView()
+            }
         }
     }
 }
