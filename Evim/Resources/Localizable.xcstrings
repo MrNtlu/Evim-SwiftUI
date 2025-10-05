@@ -1,10 +1,25 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Cancel" : {
+
+    },
+    "Cancel Shopping" : {
+
+    },
     "Delete" : {
 
     },
+    "Do you want to cancel shopping mode?" : {
+
+    },
+    "Do you want to finish and save your shopping?" : {
+
+    },
     "Edit" : {
+
+    },
+    "Finish Shopping" : {
 
     },
     "Hello, World!" : {
@@ -21,6 +36,9 @@
       }
     },
     "Home" : {
+
+    },
+    "Keep" : {
 
     },
     "List" : {
@@ -59,10 +77,16 @@
     "Shopping List" : {
 
     },
+    "Shopping Mode" : {
+
+    },
     "Start Shopping" : {
 
     },
     "UI View" : {
+
+    },
+    "Yes" : {
 
     }
   },

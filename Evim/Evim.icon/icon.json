@@ -9,7 +9,7 @@
         {
           "blend-mode" : "normal",
           "fill" : {
-            "automatic-gradient" : "srgb:1.00000,0.59608,0.00000,1.00000"
+            "solid" : "srgb:1.00000,0.59608,0.00000,1.00000"
           },
           "glass" : true,
           "image-name" : "cart-2-fill-svgrepo-com.png",
@@ -21,22 +21,9 @@
               207.04167281994052
             ]
           }
-        },
-        {
-          "blend-mode" : "normal",
-          "glass" : true,
-          "hidden" : false,
-          "image-name" : "groceries-svgrepo-com.png",
-          "name" : "groceries-svgrepo-com",
-          "position" : {
-            "scale" : 0.5,
-            "translation-in-points" : [
-              23.824857476676026,
-              74.43838470012659
-            ]
-          }
         }
       ],
+      "lighting" : "individual",
       "name" : "Cart",
       "position" : {
         "scale" : 0.85,
@@ -46,12 +33,42 @@
         ]
       },
       "shadow" : {
-        "kind" : "neutral",
+        "kind" : "layer-color",
         "opacity" : 0.5
       },
       "specular" : true,
       "translucency" : {
-        "enabled" : true,
+        "enabled" : false,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "fill" : "none",
+          "glass" : false,
+          "hidden" : false,
+          "image-name" : "groceries-svgrepo-com.png",
+          "name" : "groceries-svgrepo-com",
+          "opacity" : 1,
+          "position" : {
+            "scale" : 0.42,
+            "translation-in-points" : [
+              12.426419976676026,
+              22.42275970012659
+            ]
+          }
+        }
+      ],
+      "name" : "Grocery",
+      "shadow" : {
+        "kind" : "none",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : false,
         "value" : 0.5
       }
     },
@@ -66,7 +83,7 @@
           "image-name" : "home2-svgrepo-com.png",
           "name" : "home2-svgrepo-com",
           "position" : {
-            "scale" : 0.8,
+            "scale" : 0.82,
             "translation-in-points" : [
               0,
               0

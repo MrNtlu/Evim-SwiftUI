@@ -20,6 +20,8 @@ struct ShoppingListView: View {
                         .font(.headline)
                     Spacer()
                 }
+                .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
+                .navigationTitle(Text("Shopping List"))
             } else {
                 List {
                     ForEach(shoppingLists) { shoppingList in
@@ -40,6 +42,8 @@ struct ShoppingListView: View {
                             }
                     }
                 }
+                .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
+                .navigationTitle(Text("Shopping List"))
             }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
@@ -47,8 +51,6 @@ struct ShoppingListView: View {
                 .padding(.horizontal, 24)
                 .padding(.vertical, 12)
         }
-        .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
-        .navigationTitle(Text("Shopping List"))
     }
 
     private func deleteItem(_ item: ShoppingList) {
