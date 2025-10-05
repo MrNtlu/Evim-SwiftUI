@@ -1,0 +1,93 @@
+{
+  "fill" : {
+    "automatic-gradient" : "srgb:0.00000,0.53725,0.48235,1.00000"
+  },
+  "groups" : [
+    {
+      "blur-material" : null,
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "fill" : {
+            "automatic-gradient" : "srgb:1.00000,0.59608,0.00000,1.00000"
+          },
+          "glass" : true,
+          "image-name" : "cart-2-fill-svgrepo-com.png",
+          "name" : "cart-2-fill-svgrepo-com",
+          "position" : {
+            "scale" : 0.8,
+            "translation-in-points" : [
+              0,
+              207.04167281994052
+            ]
+          }
+        },
+        {
+          "blend-mode" : "normal",
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "groceries-svgrepo-com.png",
+          "name" : "groceries-svgrepo-com",
+          "position" : {
+            "scale" : 0.5,
+            "translation-in-points" : [
+              23.824857476676026,
+              74.43838470012659
+            ]
+          }
+        }
+      ],
+      "name" : "Cart",
+      "position" : {
+        "scale" : 0.85,
+        "translation-in-points" : [
+          -10.705505072892949,
+          -45
+        ]
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "blur-material" : null,
+      "layers" : [
+        {
+          "fill" : {
+            "solid" : "extended-gray:1.00000,1.00000"
+          },
+          "hidden" : false,
+          "image-name" : "home2-svgrepo-com.png",
+          "name" : "home2-svgrepo-com",
+          "position" : {
+            "scale" : 0.8,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "lighting" : "individual",
+      "name" : "House",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : false,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : "shared"
+  }
+}
