@@ -22,483 +22,114 @@ enum MockData {
     static let tags: [Tag] = [
         Tag(color: "#FF6B6B", emoji: "🍎", label: "Groceries"),
         Tag(color: "#4ECDC4", emoji: "🧼", label: "Cleaning"),
-        Tag(color: "#FFD93D", emoji: "🐶", label: "Pet")
+        Tag(color: "#FFD93D", emoji: "🐶", label: "Pet"),
+        Tag(color: "#9B59B6", emoji: "💊", label: "Health"),
+        Tag(color: "#45B7D1", emoji: "🏠", label: "Home"),
+        Tag(color: "#FF8787", emoji: "👕", label: "Clothing"),
+        Tag(color: "#52B788", emoji: "🪴", label: "Garden"),
+        Tag(color: "#FFB347", emoji: "🔧", label: "Tools")
     ]
-    
+
     static let tag: Tag = tags[0]
-    
-    // MARK: - Shops
-    static let shops: [Shop] = [
-        Shop(id: UUID(), name: "Local Market", createdAt: days(fromNow: -30)),
-        Shop(id: UUID(), name: "SuperMart",    createdAt: days(fromNow: -20)),
-        Shop(id: UUID(), name: "Pet Store",    createdAt: days(fromNow: -10))
-    ]
-    
-    static let shop: Shop = shops[0]
-    
-    // MARK: - Shopping Lists
-    static let shoppingLists: [ShoppingList] = [
-        ShoppingList(
+
+    // MARK: - Products
+    static let products: [Product] = [
+        Product(
             id: UUID(),
-            name: "Weekly Groceries",
-            amount: 25,
-            createdBy: users[0],
-            shops: [shops[0], shops[1]],
+            name: "Organic Milk",
+            note: "Fresh organic milk",
             tags: [tags[0]],
-            note: "Check discounts on fruits and dairy.",
+            createdAt: days(fromNow: -60),
+            createdBy: users[0]
+        ),
+        Product(
+            id: UUID(),
+            name: "Whole Wheat Bread",
+            note: nil,
+            tags: [tags[0]],
+            createdAt: days(fromNow: -55),
+            createdBy: users[0]
+        ),
+        Product(
+            id: UUID(),
+            name: "Free Range Eggs",
+            note: "Dozen eggs",
+            tags: [tags[0]],
+            createdAt: days(fromNow: -50),
+            createdBy: users[0]
+        ),
+        Product(
+            id: UUID(),
+            name: "All-Purpose Cleaner",
+            note: nil,
+            tags: [tags[1]],
+            createdAt: days(fromNow: -45),
+            createdBy: users[1]
+        ),
+        Product(
+            id: UUID(),
+            name: "Dish Soap",
+            note: nil,
+            tags: [tags[1]],
+            createdAt: days(fromNow: -40),
+            createdBy: users[1]
+        ),
+        Product(
+            id: UUID(),
+            name: "Dog Food",
+            note: "Grain-free premium",
+            tags: [tags[2]],
+            createdAt: days(fromNow: -35),
+            createdBy: users[0]
+        )
+    ]
+
+    static let product: Product = products[0]
+
+    // MARK: - Shopping Lists
+    static let shoppingLists: [ShoppingListItem] = [
+        // Item from product
+        ShoppingListItem(
+            id: UUID(),
+            createdBy: users[0],
+            createdAt: days(fromNow: -1),
+            productId: products[0].id,  // Organic Milk
+            manualName: nil,
+            manualTags: nil,
+            amount: 2,
+            unit: .liters,
+            note: "Get the one with blue cap",
             deadlineDate: days(fromNow: 2),
             isFinished: false,
+            finishedAt: nil,
+            amountPurchased: nil,
+            shopPurchasedAt: nil,
+            pricePaid: nil,
+            priceCurrency: nil
+        ),
+        // Manual entry
+        ShoppingListItem(
+            id: UUID(),
+            createdBy: users[0],
             createdAt: days(fromNow: -1),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.instacart.com")!,
-                URL(string: "https://www.walmart.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
+            productId: nil,
+            manualName: "Fresh Strawberries",
+            manualTags: [tags[0]],
+            amount: 500,
+            unit: .grams,
+            note: "Check for ripeness",
+            deadlineDate: days(fromNow: 2),
             isFinished: false,
-            createdAt: days(fromNow: -3),
             finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "House Cleaning Supplies",
-            amount: 10,
-            createdBy: users[1],
-            shops: [shops[1]],
-            tags: [tags[1]],
-            note: nil,
-            deadlineDate: days(fromNow: 7),
-            isFinished: false,
-            createdAt: days(fromNow: -3),
-            finishedAt: nil,
-            onlineShop: [
-                URL(string: "https://www.amazon.com")!
-            ]
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
-        ShoppingList(
-            id: UUID(),
-            name: "Pet Food Restock",
-            amount: 6,
-            createdBy: users[0],
-            shops: [shops[2]],
-            tags: [tags[2]],
-            note: "Get the grain-free kind.",
-            deadlineDate: nil,
-            isFinished: true,
-            createdAt: days(fromNow: -14),
-            finishedAt: days(fromNow: -7),
-            onlineShop: []
-        ),
+            amountPurchased: nil,
+            shopPurchasedAt: nil,
+            pricePaid: nil,
+            priceCurrency: nil
+        )
     ]
-    
-    static let shoppingList: ShoppingList = shoppingLists[0]
-    
+
+    static let shoppingList: ShoppingListItem = shoppingLists[0]
+
     // MARK: - Date Helpers
     static func days(fromNow days: Int) -> Date {
         Calendar.current.date(byAdding: .day, value: days, to: Date()) ?? Date()

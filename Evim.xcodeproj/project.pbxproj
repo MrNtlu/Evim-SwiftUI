@@ -6,13 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		674944FB2E9A092900DD5CB5 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 674944FA2E9A092900DD5CB5 /* Auth */; };
+		674944FD2E9A092900DD5CB5 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 674944FC2E9A092900DD5CB5 /* Functions */; };
+		674944FF2E9A092900DD5CB5 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 674944FE2E9A092900DD5CB5 /* PostgREST */; };
+		674945012E9A092900DD5CB5 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 674945002E9A092900DD5CB5 /* Realtime */; };
+		674945032E9A092900DD5CB5 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 674945022E9A092900DD5CB5 /* Storage */; };
+		67494A192E9BA46E00DD5CB5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 67D1A0022E9B55A900000001 /* GoogleSignIn */; };
+		67494BB82E9BB27500DD5CB5 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 67494BB72E9BB27500DD5CB5 /* FirebaseMessaging */; };
+		67C0F0052E9A300100000001 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 67C0F0042E9A300100000001 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		670BB15B2E8FA19C002B9CC6 /* Evim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		674944DA2E97831500DD5CB5 /* CLAUDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLAUDE.md; sourceTree = "<group>"; };
+		67C0F0022E9A300100000001 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		67C0F0032E9A300100000001 /* Config.example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.example.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		674945132E9A25F700DD5CB5 /* Exceptions for "Evim" folder in "Evim" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 670BB15A2E8FA19C002B9CC6 /* Evim */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		670BB15D2E8FA19C002B9CC6 /* Evim */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				674945132E9A25F700DD5CB5 /* Exceptions for "Evim" folder in "Evim" target */,
+			);
 			path = Evim;
 			sourceTree = "<group>";
 		};
@@ -23,6 +50,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67494BB82E9BB27500DD5CB5 /* FirebaseMessaging in Frameworks */,
+				67494A192E9BA46E00DD5CB5 /* GoogleSignIn in Frameworks */,
+				67C0F0052E9A300100000001 /* Supabase in Frameworks */,
+				674944FF2E9A092900DD5CB5 /* PostgREST in Frameworks */,
+				674944FD2E9A092900DD5CB5 /* Functions in Frameworks */,
+				674944FB2E9A092900DD5CB5 /* Auth in Frameworks */,
+				674945032E9A092900DD5CB5 /* Storage in Frameworks */,
+				674945012E9A092900DD5CB5 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +67,8 @@
 		670BB1522E8FA19C002B9CC6 = {
 			isa = PBXGroup;
 			children = (
+				67C0F0012E9A300100000001 /* Config */,
+				674944DA2E97831500DD5CB5 /* CLAUDE.md */,
 				670BB15D2E8FA19C002B9CC6 /* Evim */,
 				670BB15C2E8FA19C002B9CC6 /* Products */,
 			);
@@ -43,6 +80,15 @@
 				670BB15B2E8FA19C002B9CC6 /* Evim.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		67C0F0012E9A300100000001 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				67C0F0022E9A300100000001 /* Config.xcconfig */,
+				67C0F0032E9A300100000001 /* Config.example.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +111,14 @@
 			);
 			name = Evim;
 			packageProductDependencies = (
+				67C0F0042E9A300100000001 /* Supabase */,
+				674944FA2E9A092900DD5CB5 /* Auth */,
+				674944FC2E9A092900DD5CB5 /* Functions */,
+				674944FE2E9A092900DD5CB5 /* PostgREST */,
+				674945002E9A092900DD5CB5 /* Realtime */,
+				674945022E9A092900DD5CB5 /* Storage */,
+				67D1A0022E9B55A900000001 /* GoogleSignIn */,
+				67494BB72E9BB27500DD5CB5 /* FirebaseMessaging */,
 			);
 			productName = Evim;
 			productReference = 670BB15B2E8FA19C002B9CC6 /* Evim.app */;
@@ -96,6 +150,11 @@
 			);
 			mainGroup = 670BB1522E8FA19C002B9CC6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				67D1A0012E9B55A900000001 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				67494BB62E9BB27500DD5CB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 670BB15C2E8FA19C002B9CC6 /* Products */;
 			projectDirPath = "";
@@ -252,16 +311,23 @@
 		};
 		670BB1692E8FA19D002B9CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C0F0022E9A300100000001 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Evim;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Evim/Evim.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CC3N2RVAMN;
+				DEVELOPMENT_TEAM = 7Z7M7NW52W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Evim/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Evim;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_SUPABASE_ANON_KEY = "$(SUPABASE_ANON_KEY)";
+				INFOPLIST_KEY_SUPABASE_REDIRECT_URI = "$(SUPABASE_REDIRECT_URI)";
+				INFOPLIST_KEY_SUPABASE_URL = "$(SUPABASE_URL)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -275,9 +341,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.burakfidan.Evim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -287,16 +353,23 @@
 		};
 		670BB16A2E8FA19D002B9CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C0F0022E9A300100000001 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Evim;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Evim/Evim.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CC3N2RVAMN;
+				DEVELOPMENT_TEAM = 7Z7M7NW52W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Evim/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Evim;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_SUPABASE_ANON_KEY = "$(SUPABASE_ANON_KEY)";
+				INFOPLIST_KEY_SUPABASE_REDIRECT_URI = "$(SUPABASE_REDIRECT_URI)";
+				INFOPLIST_KEY_SUPABASE_URL = "$(SUPABASE_URL)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,9 +383,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.burakfidan.Evim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,6 +415,76 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		67494BB62E9BB27500DD5CB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.4.0;
+			};
+		};
+		67D1A0012E9B55A900000001 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		674944FA2E9A092900DD5CB5 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		674944FC2E9A092900DD5CB5 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		674944FE2E9A092900DD5CB5 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		674945002E9A092900DD5CB5 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		674945022E9A092900DD5CB5 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		67494BB72E9BB27500DD5CB5 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67494BB62E9BB27500DD5CB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		67C0F0042E9A300100000001 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 674944F92E9A092900DD5CB5 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		67D1A0022E9B55A900000001 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67D1A0012E9B55A900000001 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 670BB1532E8FA19C002B9CC6 /* Project object */;
 }

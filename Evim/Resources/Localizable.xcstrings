@@ -1,28 +1,232 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "%@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$@)"
+          }
+        }
+      }
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld tag%@ selected" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld tag%2$@ selected"
+          }
+        }
+      }
+    },
+    "•" : {
+
+    },
+    "0" : {
+
+    },
+    "8-digit code" : {
+
+    },
+    "About" : {
+
+    },
+    "Accent" : {
+
+    },
+    "Accept" : {
+
+    },
+    "Account" : {
+
+    },
+    "Add Details" : {
+
+    },
+    "Add Item" : {
+
+    },
+    "Add items to your shopping list before starting shopping mode." : {
+
+    },
+    "All" : {
+
+    },
+    "Amount" : {
+
+    },
+    "Amount Purchased" : {
+
+    },
+    "Amount: %@" : {
+
+    },
+    "Appearance" : {
+
+    },
+    "Approve" : {
+
+    },
+    "Archive" : {
+
+    },
+    "Archived" : {
+
+    },
+    "Are you sure you want to delete this item?" : {
+
+    },
+    "Are you sure you want to delete this product?" : {
+
+    },
+    "Are you sure you want to log out?" : {
+
+    },
+    "By: %@" : {
+
+    },
     "Cancel" : {
 
     },
     "Cancel Shopping" : {
 
     },
+    "Choose a color palette" : {
+
+    },
+    "Choose how the app looks. System Default follows your device settings." : {
+
+    },
+    "Choose your preferred measurement system. This affects the available units when adding items to your shopping list." : {
+
+    },
+    "Close" : {
+
+    },
+    "Code" : {
+
+    },
+    "Color" : {
+
+    },
+    "Color Palette" : {
+
+    },
+    "Continue with Google" : {
+
+    },
+    "Copied" : {
+
+    },
+    "Copy code" : {
+
+    },
+    "Create New Tag" : {
+
+    },
+    "Created At" : {
+
+    },
+    "Created By" : {
+
+    },
+    "Currency is automatically detected from your device location and can be changed here." : {
+
+    },
+    "Currency Settings" : {
+
+    },
+    "Current Currency" : {
+
+    },
+    "Date" : {
+
+    },
+    "Deadline" : {
+
+    },
+    "Decline" : {
+
+    },
     "Delete" : {
 
     },
-    "Do you want to cancel shopping mode?" : {
+    "Delete Item" : {
+
+    },
+    "Delete Product" : {
+
+    },
+    "Details" : {
+
+    },
+    "Discard Changes" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Do you want to cancel shopping?" : {
 
     },
     "Do you want to finish and save your shopping?" : {
 
     },
+    "Done" : {
+
+    },
     "Edit" : {
+
+    },
+    "Edit Item" : {
+
+    },
+    "Edit Product" : {
+
+    },
+    "Edit Tag" : {
+
+    },
+    "Emoji" : {
+
+    },
+    "Enter price" : {
+
+    },
+    "Evim" : {
+
+    },
+    "Finish a shopping session to see it here" : {
 
     },
     "Finish Shopping" : {
 
     },
-    "Hello, World!" : {
+    "From Product" : {
+
+    },
+    "Full name" : {
+
+    },
+    "Hide Details" : {
 
     },
     "History" : {
@@ -35,10 +239,46 @@
         }
       }
     },
-    "Home" : {
+    "History Details" : {
 
     },
-    "Keep" : {
+    "Household" : {
+
+    },
+    "Household code copied to clipboard." : {
+
+    },
+    "Invitations" : {
+
+    },
+    "Invite by email" : {
+
+    },
+    "Item Details" : {
+
+    },
+    "Item name" : {
+
+    },
+    "Items" : {
+
+    },
+    "Join" : {
+
+    },
+    "Join a Household" : {
+
+    },
+    "Join Requests" : {
+
+    },
+    "Joined successfully." : {
+
+    },
+    "Keep Shopping" : {
+
+    },
+    "Label" : {
 
     },
     "List" : {
@@ -51,7 +291,22 @@
         }
       }
     },
-    "Login View" : {
+    "Loading..." : {
+
+    },
+    "Log Out" : {
+
+    },
+    "Manual Entry" : {
+
+    },
+    "Measurement Units" : {
+
+    },
+    "Members" : {
+
+    },
+    "Members & Requests" : {
 
     },
     "My House" : {
@@ -68,7 +323,127 @@
     "My Household" : {
 
     },
+    "Name" : {
+
+    },
+    "name@example.com" : {
+
+    },
+    "New Product" : {
+
+    },
+    "New Tag" : {
+
+    },
+    "No History Yet" : {
+
+    },
+    "No household found." : {
+
+    },
+    "No Items in Shopping List" : {
+
+    },
+    "No Items Yet" : {
+
+    },
+    "No members yet." : {
+
+    },
+    "No pending requests." : {
+
+    },
+    "No Products Found" : {
+
+    },
+    "No Products Yet" : {
+
+    },
+    "No Tags Yet" : {
+
+    },
+    "Note" : {
+
+    },
+    "OK" : {
+
+    },
+    "Only household owner/admins can invite. Others will see an error." : {
+
+    },
+    "Optional Fields" : {
+
+    },
+    "Paste from clipboard" : {
+
+    },
+    "Preferred Currency" : {
+
+    },
+    "Preview" : {
+
+    },
+    "Price" : {
+
+    },
+    "Primary" : {
+
+    },
+    "Product Details" : {
+
+    },
+    "Product name" : {
+
+    },
     "Products" : {
+
+    },
+    "Pull to refresh or tap + to add" : {
+
+    },
+    "Quantity" : {
+
+    },
+    "Reject" : {
+
+    },
+    "Request sent for approval." : {
+
+    },
+    "Required Fields" : {
+
+    },
+    "Sample Button" : {
+
+    },
+    "Save" : {
+
+    },
+    "Search products..." : {
+
+    },
+    "Select Product" : {
+
+    },
+    "Select Tags" : {
+
+    },
+    "Selected Color" : {
+
+    },
+    "Selected Emoji" : {
+
+    },
+    "Send" : {
+
+    },
+    "Set Deadline" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Shop" : {
 
     },
     "Shopping History" : {
@@ -77,16 +452,67 @@
     "Shopping List" : {
 
     },
-    "Shopping Mode" : {
+    "Sign in to continue" : {
+
+    },
+    "Sort" : {
 
     },
     "Start Shopping" : {
 
     },
-    "UI View" : {
+    "Tag name" : {
+
+    },
+    "Tags" : {
+
+    },
+    "Tap + to add your first product" : {
+
+    },
+    "Tap + to create your first tag" : {
+
+    },
+    "Theme Mode" : {
+
+    },
+    "Theme Preview" : {
+
+    },
+    "Theme Settings" : {
+
+    },
+    "Total" : {
+
+    },
+    "Try adjusting your filters" : {
+
+    },
+    "Unarchive" : {
+
+    },
+    "Unit System" : {
+
+    },
+    "What's your name?" : {
+
+    },
+    "Where did you buy it?" : {
 
     },
     "Yes" : {
+
+    },
+    "You can also join using the 8‑digit code." : {
+
+    },
+    "You have been invited to a household" : {
+
+    },
+    "You're already a member." : {
+
+    },
+    "Your name helps others in your household identify your actions." : {
 
     }
   },
